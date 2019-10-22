@@ -1,0 +1,12 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+#error {
+    color: red;
+    display: none;
+}
+
+#container {
+    margin-top: 20px;
+}
