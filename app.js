@@ -1,6 +1,6 @@
 $('#csv-input').change(function() {
-    var file = $(this)[0].files[0];
-    var file_type = file.name.substring(file.name.lastIndexOf('.') + 1)
+    const file = $(this)[0].files[0];
+    const file_type = file.name.substring(file.name.lastIndexOf('.') + 1)
     if (file_type != "csv") {
         $("#error").show();
         $('#container').empty();
@@ -8,7 +8,7 @@ $('#csv-input').change(function() {
     } else {
         $("#error").hide();
     }
-    var reader = new FileReader();
+    const reader = new FileReader();
     
     reader.addEventListener('load', function (e) {
         let csvdata = e.target.result; 
@@ -19,8 +19,8 @@ $('#csv-input').change(function() {
 });
 
 function parseCSV(data) {
-    var commas = 0;
-    var cols;
+    let commas = 0;
+    let cols;
     for (var i = 0; i < data.length; i += 1) {
         if (data.charAt(i) == ',') {
             commas += 1;
